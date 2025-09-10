@@ -1,0 +1,26 @@
+<article
+  class="group relative rounded-lg border border-gray-800/` p-6 hover:-inset-1 transition mt-6"
+>
+  <div class="flex items-center justify-between">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-brand">
+      <path
+        d="M4 7a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V7Z"
+        stroke="currentColor"
+        stroke-width="1.5"
+      />
+    </svg>
+  </div>
+  <!-- @for (p or projects; track $index) {}  -->
+  <h3 class="mt-4 text-lg font-semibold">
+    <!-- {{ project.title }} -->
+    Project Title
+  </h3>
+  <p class="mt-2 text-sm text-gray-600">
+    <!-- {{ project.description }} -->
+    Project description goes here.
+  </p>
+  <ul class="mt-4 flex flex-wrap gap-2 text-xs text-gray-600/60">
+    <!-- {{ projets.tags}}-->
+    <li class="border border-gray-500/60 p-1 rounded-sm">list of tags</li>
+  </ul>
+</article>
