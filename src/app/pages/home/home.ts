@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { Router } from '@angular/router';
 import { HeroBanner } from '../../shared/components/hero-banner/hero-banner';
 import { About } from '../about/about';
 import { Projects } from '../projects/projects';
@@ -10,4 +11,6 @@ import { Contact } from '../contact/contact';
   templateUrl: './home.html',
   styleUrl: './home.css',
 })
-export class Home {}
+export class Home {
+  // private router = inject(Router);
+}
