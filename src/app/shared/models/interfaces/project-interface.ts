@@ -24,7 +24,7 @@ export const PROJECTLIST: ProjectInterface[] = [
     id: 3,
     title: 'Project Three',
     description: 'Description for project three.',
-    tags: ['Node.js', 'Express'],
+    tags: ['Angular', 'Typescript', 'DaisyUI'],
   },
   {
     id: 4,

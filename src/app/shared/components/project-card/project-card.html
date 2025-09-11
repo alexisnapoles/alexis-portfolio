@@ -1,5 +1,5 @@
 <article
-  class="group relative rounded-lg border border-gray-800/` p-6 hover:-inset-1 transition mt-6"
+  class="group relative rounded-lg border border-gray-800 p-6 hover:-inset-1 transition mt-6"
 >
   <div class="flex items-center justify-between">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" class="text-brand">
@@ -10,16 +10,15 @@
       />
     </svg>
   </div>
-  <!-- @for (p or projects; track $index) {}  -->
   <h3 class="mt-4 text-lg font-semibold">
-    <!-- {{ project.title }} -->
+    {{ project().title }}
   </h3>
   <p class="mt-2 text-sm text-gray-600">
-    <!-- {{ project.description }} -->
-    Project description goes here.
+    {{ project().description }}
   </p>
   <ul class="mt-4 flex flex-wrap gap-2 text-xs text-gray-600/60">
-    <!-- {{ projets.tags}}-->
-    <li class="border border-gray-500/60 p-1 rounded-sm">list of tags</li>
+    @for (tags of project().tags; track $index) {
+    <li class="border border-gray-500/60 p-1 rounded-sm">{{ tags }}</li>
+    }
   </ul>
 </article>

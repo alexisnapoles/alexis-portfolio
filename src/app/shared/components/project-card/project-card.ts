@@ -1,5 +1,5 @@
 import { ProjectInterface } from './../../models/interfaces/project-interface';
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 
 @Component({
   selector: 'app-project-card',
@@ -8,5 +8,5 @@ import { Component, input } from '@angular/core';
   styleUrl: './project-card.css',
 })
 export class ProjectCard {
-  project = input<ProjectInterface>();
+  project = input.required<ProjectInterface>();
 }

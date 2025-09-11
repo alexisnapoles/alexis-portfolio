@@ -2,6 +2,8 @@
   <a class="font-mono text-base hover:text-cyan-500">02. Some Things I Plan to Build</a>
   <div>
     <!-- stuck with property binding: need to ask HOW it is done shout i put it here or sa project-card -->
-    <app-project-card></app-project-card>
+    @for (projects of allProjects(); track projects.id) {
+    <app-project-card [project]="projects"></app-project-card>
+    }
   </div>
 </section>
