@@ -26,13 +26,11 @@ export const PROJECTLIST: ProjectInterface[] = [
     title: 'Project Three',
     description: 'Description for project three.',
     tags: ['Angular', 'Typescript', 'DaisyUI'],
-    link: 'https://example.com/project-three',
   },
   {
     id: 4,
     title: 'Project Four',
     description: 'Description for project four.',
     tags: ['Angular', 'TailwindCSS', 'Firebase'],
-    link: 'https://example.com/project-four',
   },
 ];

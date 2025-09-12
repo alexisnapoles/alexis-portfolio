@@ -10,12 +10,13 @@ import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angula
 export class Contact {
   submitted = signal(false);
   loading = signal(false);
+  sendBlankInput = signal(false);
 
   contactForm: FormGroup;
 
   constructor(private formBuilder: FormBuilder) {
     this.contactForm = this.formBuilder.group({
-      name: ['', [Validators.required, Validators.minLength(2)]],
+      name: ['', [Validators.required, Validators.minLength(5)]],
       email: ['', [Validators.required, Validators.email]],
       message: ['', [Validators.required, Validators.minLength(10)]],
     });
@@ -26,14 +27,20 @@ export class Contact {
   }
 
   onSubmit() {
+    this.sendBlankInput.set(true);
+
     if (this.contactForm.invalid) {
       this.contactForm.markAllAsTouched();
+      return;
     }
+
     this.loading.set(true);
+
     setTimeout(() => {
       this.submitted.set(true);
       this.loading.set(false);
       this.contactForm.reset();
-    }, 1000);
+      this.sendBlankInput.set(false);
+    }, 1500);
   }
 }
