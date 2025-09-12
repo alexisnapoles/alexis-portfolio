@@ -9,4 +9,9 @@ import { Component, input, output } from '@angular/core';
 })
 export class ProjectCard {
   project = input.required<ProjectInterface>();
+  openProject = output<ProjectInterface>();
+
+  onOpenProject(): void {
+    this.openProject.emit(this.project());
+  }
 }

@@ -4,6 +4,7 @@ import { HeroBanner } from '../../shared/components/hero-banner/hero-banner';
 import { About } from '../about/about';
 import { Projects } from '../projects/projects';
 import { Contact } from '../contact/contact';
+import { ProjectInterface } from '../../shared/models/interfaces/project-interface';
 
 @Component({
   selector: 'app-home',
@@ -13,4 +14,9 @@ import { Contact } from '../contact/contact';
 })
 export class Home {
   // private router = inject(Router);
+  onProjectOpened(project: ProjectInterface): void {
+    if (project.link) {
+      window.open(project.link, '_blank');
+    }
+  }
 }

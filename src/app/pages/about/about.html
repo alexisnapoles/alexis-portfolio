@@ -2,33 +2,31 @@
   <a class="font-mono text-base hover:text-cyan-500">01. About Me</a>
   <div class="grid grid-cols-2 gap-20 md:grid-cols-[1fr, 340px] items-start">
     <div class="w-[50svw] max-w-none text-gray-900/80">
-      <p class="text-left mt-6">
-        I am in the exploration phase where I am trying to learn and create things that live on the
-        internet. Peddaling back to 2020, pandemic was my turning point where a spark for coding
-        ignited, and curiosity turned was put into practice; hacking with small UIs which taught me
-        a lot about HTML, CSS, & JavaScript.
+      <p class="text-left mt-6 font-light">
+        A tech wanderer where I learn and create things that live on the internet. Peddaling back to
+        2020, pandemic was my turning point where a spark for coding ignited, and curiosity turned
+        into practice; hacking with small UIs taught me a lot about HTML, CSS, & JavaScript.
       </p>
-      <p class="text-left mt-6">
+      <p class="text-left mt-6 font-light">
         Fast forward to today, I've had the privilege of being part of Angular PH Bootcamp 2025,
         where I honed my skills in Angular and TypeScript. This experience has been instrumental in
         shaping my understanding of modern web development practices.
       </p>
       <p class="mt-6 font-mono text-xs uppercase tracking-widest text-gray-900/60">Technologies</p>
       <ul class="mt-2 grid grid-cols-2 gap-x-8 gap-y-1 text-sm">
-        <li class="flex items-center gap-2">
-          <span class="text-cyan-500">▹</span> JavaScript (ES6+)
-        </li>
-        <li class="flex items-center gap-2"><span class="text-cyan-500">▹</span> TypeScript</li>
-        <li class="flex items-center gap-2"><span class="text-cyan-500">▹</span> Angular 20</li>
-        <li class="flex items-center gap-2"><span class="text-cyan-500">▹</span> HTML & CSS</li>
-        <li class="flex items-center gap-2"><span class="text-cyan-500">▹</span> Tailwind CSS</li>
+        @for (techs of technologies(); track $index) {
+        <li class="flex items-center gap-2"><span class="text-cyan-500">▹</span>{{ techs }}</li>
+        }
       </ul>
     </div>
     <div class="relative group ml-auto">
+      <div
+        class="absolute rounded-md -inset-2.5 border border-current/40 group-hover:-inset-0 group-hover:bg-cyan-500/95 group-hover:border-none transition-all"
+      ></div>
       <img
-        src="https://i.redd.it/experimenting-with-long-exposure-portraits-on-x-t20-with-v0-rczobf4nf9ia1.jpg?s=c79bd9e7b2b5008c3904e0ffe8d48970a21ad5c4"
+        src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.zYA6hxjVesAsAsG3qT4qCAHaIs%3Fpid%3DApi&f=1&ipt=ae3406f718bde4ccfa05758c3aa12741b2a250fd4637fc62ffca414820c4e068&ipo=images"
         alt="Portrait"
-        class="relative rounded-md shadow-2xs mt-6 group-hover:-inset-2 w-2xs transition-all border border-cyan-400 p-2"
+        class="relative rounded-md drop-shadow-cyan-950 -inset-0 group-hover:-inset-4 max-w-sm transition-all"
       />
     </div>
   </div>
