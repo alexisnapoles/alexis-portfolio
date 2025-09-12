@@ -1,4 +1,4 @@
-<section class="container mx-auto mb-48 py-30 text-shadow-white" id="contact">
+<section class="container mx-auto pt-34 pb-16 text-shadow-white" id="contact">
   <a class="font-mono text-base hover:text-cyan-500">03. Want to Connect?</a>
   <h2 class="text-3xl md:text-5xl font-bold text-center mt-13">Get In Touch</h2>
   <p class="mt-4 text-gray-700/70 text-xs max-w-2xl mx-auto">
@@ -47,39 +47,12 @@
         </div>
       </div>
       <div class="gap-4">
-        <button
+        <app-button
           type="submit"
-          [disabled]="loading()"
-          class="rounded-md px-3.5 py-2.5 text-sm font-semibold bg-gray-900 text-white hover:bg-gray-100 hover:text-gray-600 self-center"
-        >
-          @if(!loading()) {<span>Send Message</span>} @else {
-          <span class="inline-flex items-center gap-2">
-            <svg class="animate-spin h-5 w-5" viewBox="0 0 50 50">
-              <circle
-                class="opacity-30"
-                cx="25"
-                cy="25"
-                r="20"
-                stroke="currentColor"
-                stroke-width="5"
-                fill="none"
-              />
-              <circle
-                class=""
-                cx="25"
-                cy="25"
-                r="20"
-                stroke="currentColor"
-                stroke-width="5"
-                fill="none"
-                stroke-dasharray="100"
-                stroke-dashoffset="75"
-              />
-            </svg>
-            Sending...
-          </span>
-          }
-        </button>
+          label="Send Message"
+          [loading]="loading()"
+          class="rounded-md bg-gray-900 hover:bg-gray-50 hover:text-gray-900 px-3.5 py-2.5 text-sm font-semibold text-white"
+        ></app-button>
         @if(submitted()) {
         <p class="py-1.5 text-sm font-semibold text-green-700">
           Thanks! I'll get back to you shortly!

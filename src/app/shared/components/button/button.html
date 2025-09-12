@@ -1,0 +1,30 @@
+<button [type]="type()" [disabled]="disabled() || loading()" (click)="onClick.emit()">
+  @if(!loading()) {<span>{{ label() }}</span
+  >} @else {
+  <span class="inline-flex items-center gap-2">
+    <svg class="animate-spin h-5 w-5" viewBox="0 0 50 50">
+      <circle
+        class="opacity-30"
+        cx="25"
+        cy="25"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+        fill="none"
+      />
+      <circle
+        class=""
+        cx="25"
+        cy="25"
+        r="20"
+        stroke="currentColor"
+        stroke-width="5"
+        fill="none"
+        stroke-dasharray="100"
+        stroke-dashoffset="75"
+      />
+    </svg>
+    Sending...
+  </span>
+  }
+</button>

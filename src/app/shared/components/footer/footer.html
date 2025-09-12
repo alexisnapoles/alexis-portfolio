@@ -1,5 +1,5 @@
-<footer class="border-t border-b w-[90svw] mx-auto py-16">
-  <div class="flex justify-center mb-8 gap-5">
+<footer class="border-t w-[90svw] mx-auto py-16">
+  <div class="flex justify-center gap-5">
     @for(socials of allSocialLinks(); track socials.name) {
     <a
       [href]="socials.url"
@@ -22,8 +22,9 @@
     }
   </div>
   <div class="container text-center text-gray-500">
-    <span class="text-sm">Built with Angular20 & TailwindCSS · {{ year() }}</span>
+    <span class="text-sm">Built by Alexis Dela Torre · {{ year() }}</span>
     <br />
-    <p class="text-xs font-light">Inspired by Brittany Chiang's v4 Design</p>
+    <span class="text-sm font-light">Powered 🚀 by Angular & TailwindCSS</span><br />
+    <p class="text-xs font-extralight">Inspired by Brittany Chiang's v4 Design</p>
   </div>
 </footer>

@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
-
+import { Button } from '../../shared/components/button/button';
 @Component({
   selector: 'app-contact',
-  imports: [ReactiveFormsModule],
+  imports: [ReactiveFormsModule, Button],
   templateUrl: './contact.html',
   styleUrl: './contact.css',
 })
 export class Contact {
   submitted = signal(false);
-  loading = signal(false);
   sendBlankInput = signal(false);
+  loading = signal(false);
 
   contactForm: FormGroup;
 
