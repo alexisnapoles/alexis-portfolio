@@ -1,5 +1,5 @@
 import { ProjectInterface, PROJECTLIST } from './../../shared/models/interfaces/project-interface';
-import { Component, signal, output } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { ProjectCard } from '../../shared/components/project-card/project-card';
 
 @Component({
