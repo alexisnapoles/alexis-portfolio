@@ -1,0 +1,19 @@
+<footer class="border-t border-b w-[90svw] mx-auto py-16">
+  <div class="flex justify-center mb-8">
+    @for(socials of allSocialLinks(); track socials.name) {
+    <a
+      [href]="socials.url"
+      target="_blank"
+      class="text-gray-500 hover:text-cyan-500 transition"
+      aria-label="link to my social media"
+    >
+      <span class="sr-only">{{ socials.name }}</span>
+    </a>
+    }
+  </div>
+  <div class="container text-center text-current/60">
+    <span class="text-sm">Built with Angular20 & TailwindCSS · {{ year() }}</span>
+    <br />
+    <p class="text-xs font-light">Inspired by Brittany Chiang's v4 Design</p>
+  </div>
+</footer>
