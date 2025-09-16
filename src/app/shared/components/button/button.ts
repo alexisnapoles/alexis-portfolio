@@ -7,7 +7,7 @@ import { Component, input, output } from '@angular/core';
   styleUrl: './button.css',
 })
 export class Button {
-  label = input<string>();
+  label = input.required<string>();
   type = input<'button' | 'submit' | 'reset'>('button');
   loading = input<boolean>(false);
   disabled = input<boolean>(false);
