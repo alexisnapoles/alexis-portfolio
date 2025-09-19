@@ -9,6 +9,7 @@ import { Button } from '../../shared/components/button/button';
 })
 export class Contact {
   submitted = signal(false);
+  // not necessary; mejo redundant. search for: [.patch, .prestine, .dirty]
   sendBlankInput = signal(false);
   loading = signal(false);
 
@@ -35,7 +36,7 @@ export class Contact {
     }
 
     this.loading.set(true);
-
+    // real world: not needed; when API used setTimeout must not be used;
     setTimeout(() => {
       this.submitted.set(true);
       this.loading.set(false);

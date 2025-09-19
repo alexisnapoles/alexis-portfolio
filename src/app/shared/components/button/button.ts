@@ -13,11 +13,4 @@ export class Button {
   disabled = input<boolean>(false);
 
   onClick = output<void>();
-
-  public openNewTab(url: string): void {
-    const newTab = window.open(url, '_blank');
-    if (newTab) {
-      newTab.opener = null;
-    }
-  }
 }
